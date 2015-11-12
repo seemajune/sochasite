@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each contact, i in contacts
+            li
+                a(href="mailto:#{contact.email}")= contact.username
