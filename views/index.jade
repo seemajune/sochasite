@@ -1,8 +1,8 @@
 extends layout
 
 block content
-    h1= title
-    h3 Share, Support, Survive.
+    img(src="/images/logo.png",width="25%",height="auto")
+    h2 Share, Support, Survive.
 
     // Wrapper
     #wrapper
@@ -28,20 +28,21 @@ block content
                     th Delete?
                 tbody
         // /USER LIST
+        
+        .row        
+          // ADD USER
+          h2.black Get the invite
+          #addUser
+              fieldset
+                  input#inputUserName(type='text', placeholder='Username')
+                  input#inputUserEmail(type='text', placeholder='Email')
+                  br
+                  button#btnAddUser.a.btn.btn-secondary.btn-lg.scroll Request Invite
+          // /ADD USER
 
-        // ADD USER
-        h2 Keep Me Posted
-        #addUser
-            fieldset
-                input#inputUserName(type='text', placeholder='Username')
-                input#inputUserEmail(type='text', placeholder='Email')
-                br
-                button#btnAddUser Keep Me Posted
-        // /ADD USER
-
-        // DONATE
-        a(href="http://www.gofundme.com/socha",target="_blank") Donate
-        // /DONATE
+          // DONATE
+          a.btn.btn-primary.btn-lg.scroll(href="http://www.gofundme.com/socha",target="_blank") Donate
+          // /DONATE
 
     // /WRAPPER
 
