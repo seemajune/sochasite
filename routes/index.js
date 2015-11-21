@@ -30,7 +30,7 @@ router.post('/', function(req, res) {
         }
         else {
             // And forward to success page
-            res.redirect("contacts");
+            res.redirect("usercollection");
         }
     });
 });

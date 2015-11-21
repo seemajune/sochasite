@@ -10,7 +10,7 @@ var monk = require('monk');
 var db = monk('localhost:27017/sochasite');
 
 var routes = require('./routes/index');
-var contacts = require('./routes/contacts');
+var usercollection = require('./routes/usercollection');
 
 var app = express();
 
@@ -33,7 +33,7 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/contacts', contacts);
+app.use('/usercollection', usercollection);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
