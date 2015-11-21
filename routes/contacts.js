@@ -7,9 +7,7 @@ router.get('/', function(req, res) {
     var collection = db.get('usercollection');
     // first param passed to find WHERE x = "something" , 2nd is ? , 3rd is callback func
     collection.find({},{},function(err, data){
-        res.render('contacts', {
-            "contacts" : data
-        });
+        res.json(data);
     });
 });
 

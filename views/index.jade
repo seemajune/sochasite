@@ -1,8 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  form#formAddUser(name="adduser",method="post",action="/")
-      input#inputUserName(type="text", placeholder="username", name="username")
-      input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-      button#btnSubmit(type="submit") submit
+    h1= title
+    p Keep Me Posted!
+
+    // Wrapper
+    #wrapper
+
+        // USER LIST
+        h2 Signups
+        #userList
+            table
+                thead
+                    th UserName
+                    th Email
+                    th Delete?
+                tbody
+        // /USER LIST
+
+    // /WRAPPER
