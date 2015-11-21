@@ -2,10 +2,21 @@ extends layout
 
 block content
     h1= title
-    p Keep Me Posted!
+    h3 Share, Support, Survive.
 
     // Wrapper
     #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 User Info
+            p
+                strong Name:
+                |  <span id='userInfoName'></span>
+                br
+                strong Email:
+                |  <span id='userInfoEmail'></span>
+        // /USER INFO
 
         // USER LIST
         h2 Signups
@@ -18,4 +29,15 @@ block content
                 tbody
         // /USER LIST
 
+        // ADD USER
+        h2 Keep Me Posted
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                button#btnAddUser Keep Me Posted
+        // /ADD USER
+
     // /WRAPPER
+
