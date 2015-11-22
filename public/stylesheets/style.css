@@ -23,7 +23,7 @@ h1 {
   font-size: 55px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #DCA219;
+  color: #B63A59;
   font-weight: 700;
 }
 
@@ -141,7 +141,7 @@ a:hover, a:focus {
 }
 
 .btn-secondary {
-  background-color: #B63A59;
+  background-color: #C0D62F;
   color: #fff;
 }
 
@@ -608,42 +608,17 @@ footer {
    Custom styles
    ========================================================================== */
 
-/*#userList {
-  margin:0 0 30px 0;
-}
-  #userList table {
-    border-collapse:separate;
-    border-spacing:1px;
-    background:#CCC;
-  }
-    #userList table th {
-      background:#EEE;
-      font-weight:600;
-      padding:10px 20px;
-      text-align:center;
-    }
-    #userList table tbody {
-      padding:0; margin:0;
-      border-collapse:collapse;
-      border-spacing:0px;
-    }
-      #userList table td {
-        background:#FFF;
-        padding:5px 10px;
-        text-align:center;
-      }
-
-#userInfo {
-  width:250px;
+#bottom-right-text{
   position:absolute;
-  top:0; left:0;
+  bottom:0;
+  right:0;
+  margin-right: 2%;
+  font-size: 2em;
+  line-height: 55px;
+  letter-spacing: -1px;
+  color: #8A5695;
+  font-weight: 700;
 }
-  #userInfo p {
-    padding:15px;
-    border:1px solid #CCC;
-    background:rgba(80,120,255,0.05);
-  }
-*/
 
 fieldset {
   border:0;
@@ -715,4 +690,6 @@ fieldset {
 logo font #1CBDE7
 pink logo #B63A59
 orange logo #DCA219
+green logo #C0D62F
+purp #8A5695
 */
