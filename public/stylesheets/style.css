@@ -127,12 +127,12 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#7BB6D5;
+  background-color:#1CBDE7;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #7BB6D5;
+  background-color: #1CBDE7;
   color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -203,7 +203,7 @@ a:hover, a:focus {
 }
 
 .blue {
-  color: #7BB6D5;
+  color: #1CBDE7;
 }
 
 .white {
@@ -215,7 +215,7 @@ a:hover, a:focus {
 }
 
 .blue-bg {
-  background: #7BB6D5;
+  background: #1CBDE7;
 }
 
 .white-bg {
@@ -234,7 +234,7 @@ a:hover, a:focus {
 
 .navbar {
     border: 0px solid rgba(0, 0, 0, 0);
-    background: #7BB6D5;
+    background: #1CBDE7;
     margin: auto;
     min-height: 60px;
     padding-top: 8px;
@@ -265,7 +265,7 @@ a:hover, a:focus {
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #7BB6D5;
+    border-color: #1CBDE7;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -418,13 +418,13 @@ hr.line {
 }
 
 .fa-envelope-o {
-  color: #7BB6D5;
+  color: #1CBDE7;
   font-size: 22px;
   display: block;
   padding-top: 15px;
   width: 60px;
   height: 60px;
-  border: 2px solid #7BB6D5;
+  border: 2px solid #1CBDE7;
   -moz-border-radius: 30px;
   -o-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -556,7 +556,7 @@ footer {
 }
 
 .features.last a {
-  color: #7BB6D5;
+  color: #1CBDE7;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -712,7 +712,7 @@ fieldset {
 
 }   
 /*
-logo font #7BB6D5
+logo font #1CBDE7
 pink logo #B63A59
 orange logo #DCA219
 */
