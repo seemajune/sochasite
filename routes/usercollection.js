@@ -15,12 +15,23 @@ router.get('/', function(req, res) {
 router.post('/adduser', function(req, res) {
     var db = req.db;
     console.log(req.body);
+
     var collection = db.get('usercollection');
-    collection.insert(req.body, function(err, result){
-        console.log("error: " , err)
-        res.send(
-            (err === null) ? { msg: '' } : { msg: err }
-        );
+    
+    collection.find({ email: req.body.email },{},function(err, data){
+        if (err) { 
+            res.send({msg: 'Sorry, there was an error', success: false});
+        }
+        console.log('data= ' , data);
+        if (data.length === 0){
+            collection.insert(req.body, function(err, result){
+                res.send((err === null) ? { msg: '', success: true } : { msg: err, success: false});
+            });
+        }
+
+        else {
+            res.send({ msg: 'Sorry, that email address is already registered.', success: false});
+        }
     });
 });
 

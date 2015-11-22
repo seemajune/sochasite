@@ -33,9 +33,9 @@ function addUser(e) { // Add User Info
     if(errorCount === 0) { // Check and make sure errorCount's still at zero
 
         var newUser = { // If it is, compile all user info into one object
-            'username': $('#inputUserName').val(),
-            'email': $('#inputUserEmail').val()
-        }
+            'username': inputName.val(),
+            'email': inputEmail.val().toLowerCase()
+        };
 
         $.ajax({ // Use AJAX to post the object to our adduser service
             type: 'POST',
@@ -47,11 +47,10 @@ function addUser(e) { // Add User Info
             if (response.msg === '') { // Check for successful (blank) response
              
               $('#addUser fieldset input').val(''); // Clear the form inputs
-               swal({   title: "Hooray!",   text: "We'll email you when Socha is available to download!",   type: "success",   confirmButtonText: "Cool" });
+                swal({   title: "Hooray!",   text: "We'll email you when Socha is available to download!",   type: "success",   confirmButtonText: "Cool" });
             }
             else {
-                alert('Error: ' + response.msg); 
-                // ADD ERROR MODAL HERE
+                swal({   title: "Hooray!",   text: response.msg,   type: "error",   confirmButtonText: "Cool" });
             }
         });
     }
