@@ -49,15 +49,15 @@ function addUser(e) { // Add User Info
 
   var errorCount = 0; // super basic error handling
 
-    $('#addUser input').each(function(index, val) {
+    $('input').each(function(index, val) {
         if($(this).val() === '') { errorCount++; } // if user didnt put in their name or email, increment errorCount 
     });
 
     if(errorCount === 0) { // Check and make sure errorCount's still at zero
 
         var newUser = { // If it is, compile all user info into one object
-            'username': $('#addUser fieldset input#inputUserName').val(),
-            'email': $('#addUser fieldset input#inputUserEmail').val()
+            'username': $('#inputUserName').val(),
+            'email': $('#inputUserEmail').val()
         }
 
         $.ajax({ // Use AJAX to post the object to our adduser service
@@ -71,7 +71,8 @@ function addUser(e) { // Add User Info
               // ADD SUCCESS MODAL HERE 
               $('#addUser fieldset input').val(''); // Clear the form inputs
 
-              populateTable();  // Update the table
+              populateTable();  // Update the table if user (seema is logged in)
+              // if not, success modal
             }
             else {
                 alert('Error: ' + response.msg); 
