@@ -50,13 +50,13 @@ function addUser(e) { // Add User Info
                 swal({   title: "Hooray!",   text: "We'll email you when Socha is available to download!",   type: "success",   confirmButtonText: "Cool" });
             }
             else {
-                swal({   title: "Hooray!",   text: response.msg,   type: "error",   confirmButtonText: "Cool" });
+                swal({   title: "Oops!",   text: response.msg,   type: "error",   confirmButtonText: "Cool" });
             }
         });
     }
     else {
         // If errorCount is more than 0, error out 
-        swal({   title: "Error!",   text: errorText,   type: "error",   confirmButtonText: "Cool" });
+        swal({   title: "Oops!",   text: errorText,   type: "error",   confirmButtonText: "Cool" });
         return false;
     }
 };
