@@ -23,7 +23,7 @@ h1 {
   font-size: 55px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #ffffff;
+  color: #DCA219;
   font-weight: 700;
 }
 
@@ -127,12 +127,12 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#70cbce;
+  background-color:#7BB6D5;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #8be2e5;
+  background-color: #7BB6D5;
   color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -141,8 +141,8 @@ a:hover, a:focus {
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  color: #231f20;
+  background-color: #B63A59;
+  color: #fff;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
@@ -203,7 +203,7 @@ a:hover, a:focus {
 }
 
 .blue {
-  color: #70cbce;
+  color: #7BB6D5;
 }
 
 .white {
@@ -215,7 +215,7 @@ a:hover, a:focus {
 }
 
 .blue-bg {
-  background: #70cbce;
+  background: #7BB6D5;
 }
 
 .white-bg {
@@ -234,7 +234,7 @@ a:hover, a:focus {
 
 .navbar {
     border: 0px solid rgba(0, 0, 0, 0);
-    background: #70cbce;
+    background: #7BB6D5;
     margin: auto;
     min-height: 60px;
     padding-top: 8px;
@@ -265,7 +265,7 @@ a:hover, a:focus {
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #4ec3cd;
+    border-color: #7BB6D5;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -273,7 +273,7 @@ a:hover, a:focus {
 }
 
 .logo img {
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 
@@ -282,15 +282,15 @@ a:hover, a:focus {
    Main styles
    ========================================================================== */
 header {
-  background: url(../img/header-bg.jpg) no-repeat center center;
+  background: url(../images/header-bg.jpeg) no-repeat left center;
   width: 100%;
   padding: 20px 10px 60px 10px;
   height: 100vh;
   overflow: hidden;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
 }
 
 .header-info {
@@ -418,13 +418,13 @@ hr.line {
 }
 
 .fa-envelope-o {
-  color: #4ec3cd;
+  color: #7BB6D5;
   font-size: 22px;
   display: block;
   padding-top: 15px;
   width: 60px;
   height: 60px;
-  border: 2px solid #4ec3cd;
+  border: 2px solid #7BB6D5;
   -moz-border-radius: 30px;
   -o-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -556,7 +556,7 @@ footer {
 }
 
 .features.last a {
-  color: #70cbce;
+  color: #7BB6D5;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -711,4 +711,8 @@ fieldset {
 @media (min-width: 1200px) and (max-width: 3000px) {
 
 }   
-
+/*
+logo font #7BB6D5
+pink logo #B63A59
+orange logo #DCA219
+*/

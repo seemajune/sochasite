@@ -6,6 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Socha' });
 });
 
+
 /* POST to Add User Service */
 router.post('/', function(req, res) {
 
