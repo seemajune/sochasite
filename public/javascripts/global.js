@@ -40,7 +40,7 @@ function addUser(e) { // Add User Info
         $.ajax({ // Use AJAX to post the object to our adduser service
             type: 'POST',
             data: newUser,
-            url: '/usercollection/adduser',
+            url: '/users/adduser',
             dataType: 'JSON'
         }).done(function(response) {  
 

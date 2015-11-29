@@ -9,19 +9,19 @@ router.route('/')
 	});
 
 /* GET list of users */
-router.route('/usercollection')
+router.route('/users')
 	.get(function(req, res) {
 		UserRouter.list(req, res);
 	});
 
 /* POST to adduser. */
-router.route('/usercollection/adduser')
+router.route('/users/adduser')
 	.post(function(req, res) {
 		UserRouter.add(req, res);
 	});
 	
 /* DELETE to deleteuser. */
-router.route('/usercollection/deleteuser/:id')
+router.route('/users/deleteuser/:id')
 	.delete(function(req, res) {
 		UserRouter.delete(req, res);
 	});
