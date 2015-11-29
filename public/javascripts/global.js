@@ -46,7 +46,9 @@ function addUser(e) { // Add User Info
 
             if (response.msg === '') { // Check for successful (blank) response
              
-              $('#addUser fieldset input').val(''); // Clear the form inputs
+				inputName.val('');
+				inputEmail.val('');
+			  // $('#addUser fieldset input').val(''); // Clear the form inputs
                 swal({   title: "Hooray!",   text: "We'll email you when Socha is available to download!",   type: "success",   confirmButtonText: "Cool" });
             }
             else {
