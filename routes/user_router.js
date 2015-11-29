@@ -39,7 +39,7 @@ var UserRouter = function(module) {
 	module.delete = function(req, res) {
 		User.findById(req.params.id, function(err, record) {
 			var recordName = record.name;
-			model.remove({ _id: req.params._id }, function(err, record) {
+			User.remove({ _id: req.params._id }, function(err, record) {
 				if(err) {
 					res.send(err);
 				}
