@@ -5,16 +5,23 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/sochasite');
+var env = process.env.NODE_ENV || 'production';
+var config = require('./env.json')[env];
+config.env = env;
 
-var routes = require('./routes/index');
-var usercollection = require('./routes/usercollection');
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect(config.db);
+
+// var monk = require('monk');
+// var db = monk('localhost:27017/sochasite');
+
+var socha_router = require('./routes/socha_router');
 
 var app = express();
 
 // view engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -27,13 +34,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Make our db accessible to our router
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
+// app.use(function(req,res,next){
+// 	console.log('made db accessible to router');
+//     req.db = db;
+//     next();
+// });
 
-app.use('/', routes);
-app.use('/usercollection', usercollection);
+app.use('/', socha_router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
