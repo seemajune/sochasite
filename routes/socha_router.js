@@ -5,7 +5,6 @@ var UserRouter = require('./user_router.js');
 /* GET home page */
 router.route('/')
 	.get(function(req, res) {
-		// res.send('<h1>hi</h1>');
 		res.render('index', { title: 'Socha'});
 	});
 
