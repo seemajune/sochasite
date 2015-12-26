@@ -5,7 +5,7 @@ var Member = require('../model/member');
 var MemberRouter = function(module) {
 	
 	module.list = function(req, res) {
-		User.find(function(err, data) {
+		Member.find(function(err, data) {
 			if(err) {
 				res.send(err);
 			}
