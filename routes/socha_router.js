@@ -11,8 +11,8 @@ router.route('/')
 		res.render('index', { title: 'Socha'});
 	});
 
-/* GET list of users */
-router.route('/members')
+/* GET list of members IF ADMIN */
+router.route('/memberslist')
 	.get(function(req, res) {
 		if (req.user){
 			MemberRouter.list(req, res);
@@ -21,6 +21,11 @@ router.route('/members')
 			res.redirect('/');
 		}
 	});
+
+router.route('/members')
+  .get(function(req, res) {
+      res.render('members');
+  });
 
 /* POST to adduser. */
 router.route('/members/addmember')

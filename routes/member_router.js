@@ -9,6 +9,7 @@ var MemberRouter = function(module) {
 			if(err) {
 				res.send(err);
 			}
+				console.log(data);
 	      res.json(data);
 		});
 	};
