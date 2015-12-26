@@ -48,6 +48,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     next();
 // });
 
+// passport config
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
+
 app.use('/', socha_router);
 
 // catch 404 and forward to error handler
