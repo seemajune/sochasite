@@ -1,17 +1,17 @@
-var userListData = []; //data to filling in info box
+var memberListData = []; //data to filling in info box
 
 $(document).ready(function() {
-    $('#btnAddUser').on('click', addUser);  // Add User button click
+    $('#btnAddMember').on('click', addMember);  // Add User button click
 });
 
-function addUser(e) { // Add User Info
+function addMember(e) { // Add User Info
 
   e.preventDefault();
 
   var errorCount = 0, // super basic error handling
       errorText = '',
-      inputEmail = $('#inputUserEmail'),
-      inputName = $('#inputUserName');
+      inputEmail = $('#inputMemberEmail'),
+      inputName = $('#inputMemberName');
 
     if(inputName.val() === '') { 
       errorCount++; // if user didnt put in their name or email, increment errorCount 
@@ -32,15 +32,16 @@ function addUser(e) { // Add User Info
 
     if(errorCount === 0) { // Check and make sure errorCount's still at zero
 
-        var newUser = { // If it is, compile all user info into one object
+        var newMember = { // If it is, compile all user info into one object
             'username': inputName.val(),
             'email': inputEmail.val().toLowerCase()
         };
 
-        $.ajax({ // Use AJAX to post the object to our adduser service
+        console.log("dmember : ",  newMember);
+        $.ajax({ // Use AJAX to post the object to our addmember service
             type: 'POST',
-            data: newUser,
-            url: '/users/adduser',
+            data: newMember,
+            url: '/members/addmember',
             dataType: 'JSON'
         }).done(function(response) {  
 

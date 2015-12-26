@@ -1,39 +1,46 @@
 var express = require('express');
 var passport = require('passport');
 var router = express.Router();
-var UserRouter = require('./user_router.js');
+var MemberRouter = require('./member_router.js');
 var Account = require('../model/account');
 
 /* GET home page */
 router.route('/')
 	.get(function(req, res) {
+		console.log("is user? ", req.user);
 		res.render('index', { title: 'Socha'});
 	});
 
 /* GET list of users */
-router.route('/users')
+router.route('/members')
 	.get(function(req, res) {
-		UserRouter.list(req, res);
+		if (req.user){
+			MemberRouter.list(req, res);
+		}
+		else {
+			res.redirect('/');
+		}
 	});
 
 /* POST to adduser. */
-router.route('/users/adduser')
+router.route('/members/addmember')
 	.post(function(req, res) {
-		UserRouter.add(req, res);
+		console.log(req.body);
+		MemberRouter.add(req, res);
 	});
 	
 /* DELETE to deleteuser. */
-router.route('/users/deleteuser/:id')
+router.route('/members/deletemember/:id')
 	.delete(function(req, res) {
-		UserRouter.delete(req, res);
+		MemberRouter.delete(req, res);
 	});
 
-/* GET Account Registration Page for Admin */
+/* GET Account Registration Page for Admin --> delete route on deploy */
 router.get('/register', function(req, res) {
     res.render('register', { });
 });
 
-/* POST to addadmin. */
+/* POST to add admin. --> delete route on deploy */
 router.post('/register', function(req, res) {
     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
         if (err) {
@@ -59,6 +66,7 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 /* GET  Logout Admin */
 router.get('/logout', function(req, res) {
     req.logout();
+    console.log("is user? ", req.user);
     res.redirect('/');
 });
 	

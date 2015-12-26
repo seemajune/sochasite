@@ -15,3 +15,7 @@ use sochasite
 ### Tutorials
 http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
 
+### Admin
+to register: hit url getsocha.com/register - delete on deploy
+to login hit url getsocha.com/login
+to logout: hit url getsocha.com/logout
