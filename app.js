@@ -16,6 +16,10 @@ mongoose.connect(config.db);
 // var monk = require('monk');
 // var db = monk('localhost:27017/sochasite');
 
+// passport
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
 var socha_router = require('./routes/socha_router');
 
 var app = express();
@@ -31,6 +35,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Make our db accessible to our router

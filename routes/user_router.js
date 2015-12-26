@@ -9,7 +9,7 @@ var UserRouter = function(module) {
 			if(err) {
 				res.send(err);
 			}
-	        res.json(data);
+	      res.json(data);
 		});
 	};
 	
@@ -43,7 +43,7 @@ var UserRouter = function(module) {
 				if(err) {
 					res.send(err);
 				}
-		        res.send({ msg: '' });
+		      res.send({ msg: '' });
 			});
 		});
 	};
