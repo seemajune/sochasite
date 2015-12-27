@@ -1,5 +1,3 @@
-var membersListData = []; //data to filling in info box
-
 $(document).ready(function() {
     showMembers();  // Add Member List
 });
@@ -16,5 +14,5 @@ function showMembers() { // Add User Info
 };
 
 function makeList(res){
-
+  console.log("response", res);
 }
