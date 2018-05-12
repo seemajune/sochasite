@@ -1,6 +1,7 @@
 
 h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
 }
 
 body, html {
@@ -10,22 +11,58 @@ body, html {
   margin: 0;
 }
 
-.wrapper {
-  font-family: 'Roboto', sans-serif;
+.bg {
   position: relative;
   background: url(../images/socha_hand.jpg) center center no-repeat;
   width: 100%;
   height: 100%;
   background-size: cover;
+  z-index: -1;
 }
 
-.wrapper:before {
+.bg:before {
   content: '';
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-	opacity: .6;
+	background-image: linear-gradient(to bottom right, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  opacity: .6;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+	right: 0;
+	bottom: 0;
+  left: 0;
+  margin-left: 50px;
+}
+
+h1.logo {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+button#btnAddMember {
+  height: 30px;
+  background-color: #0c1db8;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+form {
+  padding-bottom: 20px;
+}
+
+input {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
