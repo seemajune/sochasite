@@ -10,13 +10,7 @@ function addMember(e) { // Add User Info
 
   var errorCount = 0, // super basic error handling
       errorText = '',
-      inputEmail = $('#inputMemberEmail'),
-      inputName = $('#inputMemberName');
-
-    if(inputName.val() === '') { 
-      errorCount++; // if user didnt put in their name or email, increment errorCount 
-      errorText += "Please fill in your name.";
-    }
+      inputEmail = $('#inputMemberEmail');
 
     if(inputEmail.val() === '') { 
       errorCount++; // if user didnt put in their name or email, increment errorCount 
@@ -33,7 +27,6 @@ function addMember(e) { // Add User Info
     if(errorCount === 0) { // Check and make sure errorCount's still at zero
 
         var newMember = { // If it is, compile all user info into one object
-            'username': inputName.val(),
             'email': inputEmail.val().toLowerCase()
         };
 
@@ -46,8 +39,6 @@ function addMember(e) { // Add User Info
         }).done(function(response) {  
 
             if (response.msg === '') { // Check for successful (blank) response
-             
-				inputName.val('');
 				inputEmail.val('');
 			  // $('#addUser fieldset input').val(''); // Clear the form inputs
                 swal({   title: "Hooray!",   text: "We'll email you when Socha is available to download!",   type: "success",   confirmButtonText: "Cool" });
