@@ -6,8 +6,8 @@ cd ~/mongodb/bin/
 <!-- ./mongo util
 use sochasite -->
 
-### Set Local Environment to Devel
-export NODE_ENV=development
+### Set Local Environment to Development
+export NODE_ENV=dev
 
 ### Local Server
 run local (localhost:3000)
@@ -20,3 +20,5 @@ http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
 to register: hit url getsocha.com/register - delete on deploy
 to login hit url getsocha.com/login
 to logout: hit url getsocha.com/logout
+
+

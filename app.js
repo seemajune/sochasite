@@ -5,16 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var env = process.env.NODE_ENV || 'production';
+var env = process.env.NODE_ENV || 'dev';
 var config = require('./env.json')[env];
 config.env = env;
-
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
-mongoose.connect(config.db);
-
-// var monk = require('monk');
-// var db = monk('localhost:27017/sochasite');
+console.log(`config = `, config);
 
 // passport
 var passport = require('passport');

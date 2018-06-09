@@ -16,7 +16,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/animate.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" type="text/css" href="/sweetalert/dist/sweetalert.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -31,19 +32,24 @@
   </head>
 
   <body>
-    <div class="bg">
-    </div>
     <div class="wrapper">
-      <h1 class="logo">socha</h1>
-      <h2>Improving lives by transforming the way patients, survivors and caregivers connect and source information.
-      </h2>
-        <div>
-        <form role="form">
-          <div class="form__fields">
-            <input type="text" id="inputMemberEmail" placeholder="Enter Email">
-          </div>
-          <button id="btnAddMember" type="submit">get on the list</button>
-        </form>
+      <div class="socha__content">
+        <div class="socha__logo">
+          <h1 class="logo">socha</h1>
+        </div>
+        <div class="socha__text">
+          <h2>
+              <span class="socha__text--bold">Improving lives</span>
+              <span>by transforming the way patients, 
+                  survivors and caregivers connect and source information.</span>
+          </h2>
+        </div>
+        <div class="form__fields">
+          <form role="form">
+            <input type="text" id="inputMemberEmail" placeholder="Email Address">
+            <button id="btnAddMember" type="submit">get on the list</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
